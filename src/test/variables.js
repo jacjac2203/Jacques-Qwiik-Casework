@@ -3,7 +3,10 @@ const data = {
     username: 'standard_user',
 	password: 'secret_sauce',
 	invalidUsername: 'a',
-	invalidPassword: 'b'
+	invalidPassword: 'b',
+	first: 'First',
+	last: 'Last',
+	postal: 'one'
 };
 
 module.exports = {data};

@@ -6,7 +6,6 @@ const variable = require("../variables");
 // const object = require("../Login/objects");
 
 Given('User open the Swag Labs web', async function () {
-
     await pageFixture.page.goto(variable.data.url);
 })
 
@@ -16,18 +15,22 @@ Given('Verify user on the right page', async function () {
 })
 
 Given('User enter the username on Username text field', async function () {
+    await pageFixture.page.locator("data-test=username").click();
     await pageFixture.page.locator("data-test=username").fill(variable.data.username);
 })
 
 Given('User enter the password on Password text field', async function () {
+    await pageFixture.page.locator("data-test=password").click();
     await pageFixture.page.locator("data-test=password").fill(variable.data.password);
 })
 
 Given('User enter the wrong username on Username text field', async function () {
+    await pageFixture.page.locator("data-test=username").click();
     await pageFixture.page.locator("data-test=username").fill(variable.data.invalidUsername);
 })
 
 Given('User enter the wrong password on Password text field', async function () {
+    await pageFixture.page.locator("data-test=password").click();
     await pageFixture.page.locator("data-test=password").fill(variable.data.invalidPassword);
 })
 
